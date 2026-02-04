@@ -1,22 +1,47 @@
 {
     "en": {
         "title": "Lotto Number Generator",
-        "generateBtn": "Generate Numbers"
+        "generateBtn": "Generate Numbers",
+        "contactTitle": "Partnership Inquiry",
+        "formNameLabel": "Name:",
+        "formEmailLabel": "Email:",
+        "formMessageLabel": "Message:",
+        "formSubmitBtn": "Send Inquiry"
     },
     "fr": {
         "title": "Générateur de Numéros de Loto",
-        "generateBtn": "Générer les Numéros"
+        "generateBtn": "Générer les Numéros",
+        "contactTitle": "Demande de Partenariat",
+        "formNameLabel": "Nom :",
+        "formEmailLabel": "E-mail :",
+        "formMessageLabel": "Message :",
+        "formSubmitBtn": "Envoyer la Demande"
     },
     "de": {
         "title": "Lottozahlen-Generator",
-        "generateBtn": "Zahlen Generieren"
+        "generateBtn": "Zahlen Generieren",
+        "contactTitle": "Partnerschaftsanfrage",
+        "formNameLabel": "Name:",
+        "formEmailLabel": "E-Mail:",
+        "formMessageLabel": "Nachricht:",
+        "formSubmitBtn": "Anfrage Senden"
     },
     "it": {
         "title": "Generatore di Numeri del Lotto",
-        "generateBtn": "Genera Numeri"
+        "generateBtn": "Genera Numeri",
+        "contactTitle": "Richiesta di Partnership",
+        "formNameLabel": "Nome:",
+        "formEmailLabel": "Email:",
+        "formMessageLabel": "Messaggio:",
+        "formSubmitBtn": "Invia Richiesta"
     },
     "ja": {
         "title": "ロト番号ジェネレーター",
-        "generateBtn": "番号を生成"
+        "generateBtn": "番号を生成",
+        "contactTitle": "提携のお問い合わせ",
+        "formNameLabel": "名前：",
+        "formEmailLabel": "メール：",
+        "formMessageLabel": "メッセージ：",
+        "formSubmitBtn": "お問い合わせを送信"
     }
 }
