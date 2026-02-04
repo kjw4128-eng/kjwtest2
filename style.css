@@ -63,43 +63,21 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Theme Toggle Switch Styles */
+/* Theme Toggle Button Styles */
 #theme-toggle-container {
-    margin-top: 20px;
-}
-
-.theme-toggle {
-    display: none; /* Hide the default checkbox */
-}
-
-.theme-toggle-label {
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.theme-toggle-label::after {
-    content: '';
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 26px;
-    height: 26px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
+    top: 20px;
+    right: 20px;
 }
 
-.theme-toggle:checked + .theme-toggle-label {
-    background-color: #007bff; /* Color when dark mode is active */
-}
-
-.theme-toggle:checked + .theme-toggle-label::after {
-    transform: translateX(30px);
+.theme-toggle-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 

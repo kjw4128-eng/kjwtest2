@@ -1,12 +1,12 @@
 
 const lottoNumbersDiv = document.getElementById("lotto-numbers");
 const generateBtn = document.getElementById("generate-btn");
-const themeToggle = document.getElementById("theme-toggle");
+const themeToggle = document.getElementById("theme-toggle"); // Now a button
 
 // Function to apply the theme
 function applyTheme(isDarkMode) {
     document.body.classList.toggle("dark-mode", isDarkMode);
-    themeToggle.checked = isDarkMode;
+    themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
 }
 
 // Check for saved theme preference in localStorage
@@ -21,11 +21,11 @@ if (savedTheme === "dark") {
     applyTheme(prefersDarkMode);
 }
 
-// Event listener for theme toggle
-themeToggle.addEventListener("change", () => {
-    const isDarkMode = themeToggle.checked;
-    applyTheme(isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+// Event listener for theme toggle button
+themeToggle.addEventListener("click", () => {
+    const isDarkMode = document.body.classList.contains("dark-mode");
+    applyTheme(!isDarkMode); // Toggle the theme
+    localStorage.setItem("theme", !isDarkMode ? "dark" : "light");
 });
 
 generateBtn.addEventListener("click", () => {
