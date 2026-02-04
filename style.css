@@ -20,8 +20,9 @@ body.dark-mode {
 body {
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack containers vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center items horizontally within the column */
     min-height: 100vh;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -30,6 +31,13 @@ body {
 
 .container {
     text-align: center;
+    width: 100%; /* Ensure containers take full available width */
+    max-width: 600px; /* Limit width for readability on large screens */
+    margin-bottom: 20px; /* Space between containers */
+    padding: 20px;
+    background-color: var(--number-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
 }
 
 .lotto-numbers {
