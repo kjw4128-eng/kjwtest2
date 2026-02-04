@@ -159,4 +159,23 @@ body {
     color: var(--text-color);
 }
 
+/* Disqus Comments Styles */
+#disqus_thread {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed for better readability */
+    padding: 20px;
+    background-color: var(--number-bg); /* Use consistent background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+    text-align: left; /* Ensure text within Disqus is left-aligned */
+}
+
+@media (max-width: 768px) {
+    #disqus_thread {
+        padding: 10px;
+        margin-top: 20px;
+    }
+}
+
 
