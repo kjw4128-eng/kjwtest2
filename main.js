@@ -1,6 +1,32 @@
 
 const lottoNumbersDiv = document.getElementById("lotto-numbers");
 const generateBtn = document.getElementById("generate-btn");
+const themeToggle = document.getElementById("theme-toggle");
+
+// Function to apply the theme
+function applyTheme(isDarkMode) {
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    themeToggle.checked = isDarkMode;
+}
+
+// Check for saved theme preference in localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    applyTheme(true);
+} else if (savedTheme === "light") {
+    applyTheme(false);
+} else {
+    // If no preference, check system preference
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    applyTheme(prefersDarkMode);
+}
+
+// Event listener for theme toggle
+themeToggle.addEventListener("change", () => {
+    const isDarkMode = themeToggle.checked;
+    applyTheme(isDarkMode);
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+});
 
 generateBtn.addEventListener("click", () => {
     lottoNumbersDiv.innerHTML = ""; // Clear previous numbers
@@ -18,3 +44,4 @@ generateBtn.addEventListener("click", () => {
         lottoNumbersDiv.appendChild(numberDiv);
     });
 });
+

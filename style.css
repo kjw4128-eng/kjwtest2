@@ -1,11 +1,31 @@
 
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --number-bg: #fff;
+    --button-bg: #4CAF50;
+    --button-color: white;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #333;
+    --text-color: #f0f0f0;
+    --number-bg: #555;
+    --button-bg: #007bff;
+    --button-color: white;
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -22,13 +42,14 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--number-bg);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 #generate-btn {
@@ -37,6 +58,48 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    transition: background-color 0.3s, color 0.3s;
 }
+
+/* Theme Toggle Switch Styles */
+#theme-toggle-container {
+    margin-top: 20px;
+}
+
+.theme-toggle {
+    display: none; /* Hide the default checkbox */
+}
+
+.theme-toggle-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:checked + .theme-toggle-label {
+    background-color: #007bff; /* Color when dark mode is active */
+}
+
+.theme-toggle:checked + .theme-toggle-label::after {
+    transform: translateX(30px);
+}
+
