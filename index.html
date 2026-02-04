@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="language-switcher-container">
+        <select id="language-switcher">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>Lotto Number Generator</h1>
+        <h1 data-key="title">Lotto Number Generator</h1>
         <div class="lotto-numbers" id="lotto-numbers"></div>
-        <button id="generate-btn">Generate Numbers</button>
+        <button id="generate-btn" data-key="generateBtn">Generate Numbers</button>
         <div id="theme-toggle-container">
             <button id="theme-toggle" class="theme-toggle-button"></button>
         </div>

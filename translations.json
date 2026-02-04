@@ -1,0 +1,22 @@
+{
+    "en": {
+        "title": "Lotto Number Generator",
+        "generateBtn": "Generate Numbers"
+    },
+    "fr": {
+        "title": "Générateur de Numéros de Loto",
+        "generateBtn": "Générer les Numéros"
+    },
+    "de": {
+        "title": "Lottozahlen-Generator",
+        "generateBtn": "Zahlen Generieren"
+    },
+    "it": {
+        "title": "Generatore di Numeri del Lotto",
+        "generateBtn": "Genera Numeri"
+    },
+    "ja": {
+        "title": "ロト番号ジェネレーター",
+        "generateBtn": "番号を生成"
+    }
+}

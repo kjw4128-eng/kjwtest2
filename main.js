@@ -2,6 +2,41 @@
 const lottoNumbersDiv = document.getElementById("lotto-numbers");
 const generateBtn = document.getElementById("generate-btn");
 const themeToggle = document.getElementById("theme-toggle"); // Now a button
+const languageSwitcher = document.getElementById("language-switcher");
+
+let translations = {};
+
+// Fetch translations
+async function loadTranslations() {
+    try {
+        const response = await fetch('translations.json');
+        translations = await response.json();
+        const savedLanguage = localStorage.getItem("language") || "en";
+        setLanguage(savedLanguage);
+    } catch (error) {
+        console.error("Could not load translations:", error);
+    }
+}
+
+// Function to set the language
+function setLanguage(lang) {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    languageSwitcher.value = lang;
+    document.documentElement.lang = lang; // Update the lang attribute of the html tag
+}
+
+// Event listener for language switcher
+languageSwitcher.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+    localStorage.setItem("language", selectedLanguage);
+});
+
 
 // Function to apply the theme
 function applyTheme(isDarkMode) {
@@ -44,4 +79,8 @@ generateBtn.addEventListener("click", () => {
         lottoNumbersDiv.appendChild(numberDiv);
     });
 });
+
+// Initial load
+loadTranslations();
+
 

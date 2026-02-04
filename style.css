@@ -63,6 +63,19 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+#language-switcher-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#language-switcher {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
 /* Theme Toggle Button Styles */
 #theme-toggle-container {
     position: absolute;
