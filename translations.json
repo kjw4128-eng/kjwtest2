@@ -1,6 +1,7 @@
 {
     "en": {
         "title": "Lotto Number Generator",
+        "metaDescription": "Generate random lucky numbers for various lottery games with a single click. Easy and fast Lotto Number Generator.",
         "generateBtn": "Generate Numbers",
         "contactTitle": "Partnership Inquiry",
         "formNameLabel": "Name:",
@@ -10,6 +11,7 @@
     },
     "fr": {
         "title": "Générateur de Numéros de Loto",
+        "metaDescription": "Générez des numéros chanceux aléatoires pour divers jeux de loterie en un seul clic. Générateur de numéros de loto simple et rapide.",
         "generateBtn": "Générer les Numéros",
         "contactTitle": "Demande de Partenariat",
         "formNameLabel": "Nom :",
@@ -19,6 +21,7 @@
     },
     "de": {
         "title": "Lottozahlen-Generator",
+        "metaDescription": "Generieren Sie mit einem Klick zufällige Glückszahlen für verschiedene Lotteriespiele. Einfacher und schneller Lottozahlen-Generator.",
         "generateBtn": "Zahlen Generieren",
         "contactTitle": "Partnerschaftsanfrage",
         "formNameLabel": "Name:",
@@ -28,6 +31,7 @@
     },
     "it": {
         "title": "Generatore di Numeri del Lotto",
+        "metaDescription": "Genera numeri fortunati casuali per vari giochi della lotteria con un solo clic. Generatore di numeri del lotto facile e veloce.",
         "generateBtn": "Genera Numeri",
         "contactTitle": "Richiesta di Partnership",
         "formNameLabel": "Nome:",
@@ -37,6 +41,7 @@
     },
     "ja": {
         "title": "ロト番号ジェネレーター",
+        "metaDescription": "クリック一つで様々な宝くじゲームのランダムな数字を生成します。簡単で速いロト番号ジェネレーター。",
         "generateBtn": "番号を生成",
         "contactTitle": "提携のお問い合わせ",
         "formNameLabel": "名前：",

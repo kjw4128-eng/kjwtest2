@@ -26,6 +26,20 @@ function setLanguage(lang) {
             element.textContent = translations[lang][key];
         }
     });
+
+    // Update Page Title and Meta Description for SEO
+    if (translations[lang]) {
+        if (translations[lang].title) {
+            document.title = translations[lang].title + " - Lotto Number Generator";
+        }
+        if (translations[lang].metaDescription) {
+            let metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute("content", translations[lang].metaDescription);
+            }
+        }
+    }
+
     languageSwitcher.value = lang;
     document.documentElement.lang = lang; // Update the lang attribute of the html tag
 }
